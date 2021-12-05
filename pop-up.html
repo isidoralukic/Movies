@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Css link -->
+    <link rel="stylesheet" href="./css/pop-up.css">
+</head>
+<body>
+
+    <div class="pop-up">
+        <div class="container">
+            <span>There are no more movies to load</span>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            let p = document.querySelector(".pop-up");
+            p.style.top = "5%";
+            setTimeout(() => p.style.top = "-10%", 2000);
+        }, 2000);
+    </script>
+
+</body>
+</html>

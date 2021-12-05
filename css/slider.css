@@ -1,0 +1,104 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+/* 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.slider {
+    margin: auto;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 1px 17px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 1px 17px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 1px 17px 0px rgba(0, 0, 0, 0.75);
+}
+
+.slider .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slider .img-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    animation: loadingAnimation .7s ease alternate infinite;
+}
+@keyframes loadingAnimation {
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: rgb(218, 218, 218);
+    }
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: none;
+    transition: all .5s ease;
+}
+.slider img:hover {
+    transform: scale(1.1);
+}
+
+.slider .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider .left-btn { left: 1%; }
+.slider .right-btn { right: 1%; }
+
+.slider .button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.slider:hover .button button {
+    opacity: 1;
+}
+
+.slider .slider-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0px 0px 10px 10px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 500px) {
+    .slider {
+        width: 300px;
+        height: 500px;
+    }
+}

@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="type" content="tv-shows" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <!-- CSS links -->
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/pop-up.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/spinner.css">
+    <link rel="stylesheet" href="./css/movies.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-tv"></i> Movies
+                </a>
+            </div>
+            <div class="links">
+                <button><i class="fas fa-bars"></i></button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pop-up">
+        <div class="container">
+            <span>There are no more movies to load</span>
+        </div>
+    </div>
+
+    <section class="trending-movies" id="trending-movies">
+        <div class="continer">
+
+            <div class="filters">
+                <form id="form">
+                    
+                    <div class="row row-grid">
+                        <div class="genre">
+                            <select name="genre" id="genre">
+                                <option value="" disabled> - Select Genre - </option>
+                                <option value="0" selected>All</option>
+                            </select>
+                        </div>
+
+                        <div class="rating">
+                            <select name="movies-rating" id="movies-rating">
+                                <option value="" disabled> - Select Rating - </option>
+                                <option value="0" selected>All Ratings</option>
+                                <option value="1">High Rated (70% ... 100%)</option>
+                                <option value="2">Mid Rated (40% ... 70%)</option>
+                                <option value="3">Low Rated (0% ... 40%)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="search">
+                            <input type="text" placeholder="Search title" id="search" autocomplete = "off">
+                            <button><i class="fas fa-search"></i> Search</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="collection-type"><i class="fas fa-search"></i> Movies</div>
+
+            <div class="modal-window">
+                <div class="selected-movie">
+                    <div class="container">
+                        <div class="information">
+                            <div class="selected-poster">
+                                <img src="./images/poster-backup.jpg" alt="movie">
+                            </div>
+                            <div class="details">
+                                <h3 id="movie-title">Movie Title</h3>
+                                <div class="row">
+                                    <div class="detail">
+                                        <div class="data" id="rating">
+                                            <i class="far fa-star"></i> xxx%
+                                        </div>
+                                        <div class="text">Rating</div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="data" id="voted">
+                                            xxx
+                                        </div>
+                                        <div class="text">People voted</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="detail">
+                                        <div class="data" id="release-date">
+                                            xxxx-xx-xx
+                                        </div>
+                                        <div class="text">Release Date</div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="data" id="language">
+                                            xxx
+                                        </div>
+                                        <div class="text">Language</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="row-container">
+                                        Genre: <br> <span id="selected-genre-list">/</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <h3>Description:</h3>
+                            <div class="desc-text">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spinner-container">
+                <div class="spinner"></div>
+            </div>
+
+            <div class="collection" id="collection">
+                
+                <div class="box">
+                    <div class="container">
+                        <div class="poster">
+                            <img src="./images/poster-backup.jpg" alt="movie-poster">
+                            <div class="mask"></div>
+                        </div>
+                        <div class="mini-description">
+                            <div class="box-title">Movie</div>
+                            <div class="box-year">xxxx</div>
+                        </div>
+                    </div>
+                </div>                
+
+            </div>
+
+            <div class="load-more">
+                <button id="load">Load More</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="cln logo">
+                <a href="index.html">
+                    <i class="fas fa-tv"></i> Movies
+                </a>
+            </div>
+            <div class="cln">
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+            </div>
+            <div class="cln">&copy; 2021 Movies, In. All rights reserved</div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+        
+</body>
+</html>

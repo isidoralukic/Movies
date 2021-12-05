@@ -1,0 +1,146 @@
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  font-family: inherit;
+}
+  
+.navbar span {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar span:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: rgb(4, 136, 245);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content span {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content span:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+body section.trending-movies {
+  margin-top: 3rem;
+}
+
+.filters {
+  width: 100%;
+  background-color: rgb(31, 31, 31);
+  margin-bottom: 4rem;
+}
+
+form {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+form .row-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+form .row {
+  width: 100%;
+  padding: 1rem;
+}
+
+form .row div {
+  padding: 2rem 1rem;
+}
+
+form .row .search {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+}
+
+form .search button {
+  min-width: 90px;
+  border: none;
+  background-color: rgb(31, 31, 31);
+  border-bottom: 2px solid rgb(139, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+form .search button:hover {
+  background-color: rgb(139, 0, 0);
+}
+
+form select,
+form input {
+  width: 100%;
+}
+
+form input {
+  background-color: rgb(31, 31, 31);
+  border: none;
+  border-bottom: 2px solid rgb(4, 136, 245);;
+  padding: 5px 10px ;
+  outline: none;
+  text-align: center;
+}
+
+select {
+  background-color: rgb(44, 44, 44);
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
+  outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  form .row {
+    padding: 0.7rem 0.5rem;
+  }
+  form .row-grid {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  form .row .search {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+}
